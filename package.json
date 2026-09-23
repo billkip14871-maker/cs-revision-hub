@@ -14,5 +14,10 @@
     "@supabase/ssr": "latest",
     "@supabase/supabase-js": "latest",
     "openai": "latest"
+  },
+  "devDependencies": {
+    "typescript": "latest",
+    "@types/react": "latest",
+    "@types/node": "latest"
   }
 }
