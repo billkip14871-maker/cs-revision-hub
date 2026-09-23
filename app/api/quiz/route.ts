@@ -1,0 +1,2 @@
+import{NextResponse}from'next/server';import{createClient}from'@supabase/supabase-js'
+export async function GET(req:Request){const course=new URL(req.url).searchParams.get('course');const s=createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!,process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!);let q=s.from('quiz_questions').select('id,question,options,explanation,quiz:quizzes(title,course_id)').limit(20);if(course)q=q.eq('quizzes.course_id',course);const{data,error}=await q;if(error)return NextResponse.json({error:error.message},{status:500});return NextResponse.json(data||[])}

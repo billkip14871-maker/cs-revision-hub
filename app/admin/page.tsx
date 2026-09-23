@@ -1,0 +1,2 @@
+import Link from'next/link'
+export default function Admin(){return <main className="container"><Link href="/">← Home</Link><div className="panel"><h1>Content verification centre</h1><p>Only authorized reviewers should publish verified content.</p><ul><li>Official university source</li><li>Curriculum/version recorded</li><li>Reviewer recorded</li><li>Rights checked</li><li>Only verified notes enter AI retrieval</li></ul></div></main>}
